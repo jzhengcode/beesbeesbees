@@ -12,6 +12,12 @@ var Bee = function() {
   // alter the value in the age property to 5
   // alter the value in the colo property to be yellow
   // create job property that is a string "keep on growing"
+  Grub.call(this);
+  this.age = 5;
+  this.color = 'yellow';
+  this.job = 'keep on growing';
 }
 //create a prototypal method eat is an instantiation of the Grub prototype
 // add a prototypal constructor property will report Bee
+Bee.prototype = Object.create(Grub.prototype);
+Bee.prototype.constructor = Bee;
